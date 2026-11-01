@@ -50,6 +50,18 @@ Then open the project from Unity Hub, and set **Edit → Preferences → Externa
 - Main target: **Web** (`Web - Desktop - Development` while developing, `Web - Desktop - Release` for uploads).
 - A Windows build is added at the end as an extra download.
 
+### Deploy to itch.io
+
+Requires [butler](https://itchio.itch.io/butler) (`butler login` once), and admin access to the itch.io project.
+
+1. In Unity: **File → Build Profiles → Web - Desktop - Release → Build**, output to `Builds/Web`.
+2. Push:
+   ```powershell
+   butler push Builds\Web <itch-user>/gameoff2026:web --userversion 0.1.0
+   ```
+3. Windows build (end of jam): build to `Builds/Windows`, then
+   `butler push Builds\Windows <itch-user>/gameoff2026:windows`
+
 ## License
 
 - **Code**: MIT, see [LICENSE](LICENSE).
