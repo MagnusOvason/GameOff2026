@@ -1,7 +1,7 @@
 # GameOff2026
 
 Our entry for [GitHub Game Off 2026](https://itch.io/jam/game-off-2026).
-A 2.5D pixel-art game made in Unity (URP).
+A 2D pixel-art game made in Unity (URP 2D).
 
 > Title and description will be updated once the theme is announced.
 
@@ -35,7 +35,16 @@ git config merge.unityyamlmerge.driver "'$merge' merge -h -p --force %O %B %A %A
 git config merge.unityyamlmerge.recursive binary
 ```
 
-Then open the project from Unity Hub, and set **Edit → Preferences → External Tools → Rider**.
+Then open the project from Unity Hub and:
+
+- **Edit → Preferences → External Tools → Rider**, then **Regenerate project files**.
+- Click the bug icon (bottom-right of the Editor) → **Debug mode**, so Rider breakpoints work.
+
+### When the Unity version is upgraded
+
+1. Install the new version in Unity Hub (with **Web Build Support**) and open the project with it.
+2. **Regenerate project files** in Preferences → External Tools.
+3. Re-run step 4 above. The Smart Merge path contains the Unity version.
 
 ## Workflow
 
